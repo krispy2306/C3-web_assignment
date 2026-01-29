@@ -331,7 +331,7 @@ woops - need to fix button
 - added overlay for when window is open
 - issues with HTML structure + typos - fixed
 
-![alt text](images/image/24.png)
+![alt text](images/image24.png)
 it works!!!
 - need to change transparency
 - done
