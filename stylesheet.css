@@ -1,0 +1,336 @@
+body {
+    background-color: transparent;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+h1{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+    text-align: left;
+    margin: 0px -5px -5px 0px;
+
+}
+
+h2 {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 170px;
+    font-style: bold;
+}
+
+h3 {
+    color: rgb(214, 214, 214);
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: justify;
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+.top_bar {
+    background-color:rgb(13, 13, 255);
+    top: 0;
+    left: 0;
+    width: 100%;
+    gap: 280px;
+    display: flex;
+    justify-content: center;
+    font-family: "Overpass Mono", monospace;
+    font-size: 30px;
+}
+
+.top_bar a{
+    color: black;
+    text-decoration: none;
+}
+
+.highlight {
+    color: rgb(13, 13, 255)
+}
+
+.circle-image {
+    z-index: 1;
+    position: relative;
+    border-radius: 50%;
+    width: 400px;  
+    height: 400px;
+    object-fit: cover;
+}
+
+#muteButton {
+    background: none;
+    border: none;
+    transform: translateX(-50%) scale(1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+}
+
+#muteButton img {
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+
+#muteButton:hover {
+    transform: translateX(-50%) scale(1.25);
+    filter: drop-shadow(0 0 10px rgba(13, 13, 255, 0.8));
+}
+
+.coding3-btn {
+    position: fixed;
+    right: 35px;
+    top: 450px;
+    transition: transform 0.2s ease;
+
+    background: rgb(13, 13, 255);
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    font-style: bold;
+    font-size: 50px;
+    padding: 14px 20px;
+    border-radius: 999px;
+    z-index: 9998;
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+.coding3-btn:hover {
+    transform: translateX(-50%) scale(1.25);
+    filter: drop-shadow(0 0 10px rgba(13, 13, 255, 0.8));
+}
+
+.workWindow {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 80px;
+
+    width: 520px;
+    max-width: 90vw;
+    max-height: 75vh;
+
+    background: rgb(20, 20, 35);
+    border: 1px solid rgba (255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.workHeader {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.25);
+    cursor: grab;
+    user-select: none;
+}
+
+.workHeader:active {
+    cursor: grabbing;
+}
+
+.workClose {
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.workClose:hover {
+    transform: scale(1.15);
+}
+
+.work-body {
+    padding: 16px;
+    overflow-y: auto;
+    max-height: calc(75vh - 52px);
+    font-family: "Raleway", sans-serif;
+}
+
+.work-sub {
+    margin: 0 0 14px 0;
+    color: rgb(214, 214, 214);
+}
+
+.accordion details {
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255, 0.08);
+}
+
+.accordion summary {
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.week-body {
+    margin-top: 10px;
+    color: rgb(214, 214, 214);
+    font-size: 16px;
+}
+
+.week-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.week-btn-link {
+    display: inline-block;
+    background: rgb(13, 13, 255);
+    color: black;
+    padding: 8px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.week-btn-link:hover {
+    transform: scale(1.05);
+}
+
+.week-preview {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    margin-top: 8px;
+}
+
+.week-desc {
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+    margin-top: 6px;
+    line-height: 1.3;
+}
+
+.contrast-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.contrast-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.contrast-btn:focus {
+    outline: none;
+}
+
+.contrast-icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* light mode */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+body.light-mode .container {
+    background-color: rgba(245, 245, 245, 0.8);
+}
+
+
+body.light-mode .top_bar a {
+    color: white;
+}
+
+body.light-mode .workWindow,
+body.light-mode .workHeader {
+    background-color: #fff;
+    color: black;
+}
+
+body.light-mode .accordion details {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .week-btn-link,
+body.light-mode .coding3-btn {
+    background-color: rgb(13, 13, 255);
+    color: black;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p,
+body.light-mode .week-body,
+body.light-mode .week-desc,
+body.light-mode .work-sub,
+body.light-mode summary {
+    color: black !important;
+}
+
+body.light-mode .highlight {
+    color: rgb(13, 13, 255);
+}

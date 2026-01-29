@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <!-- google font links -->
+        <link rel="stylesheet" text = "text/css" href="stylesheet.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- p5.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class = "button-container">
+                <button id="muteButton"><img src ="assets/speaker-305553_640.png" alt = "Mute"></button>
+            </div>
+            <h1>NIKITA</h1>
+            <h1>COLLINS</h1>
+
+            <button id = 'contrastToggle' class = 'contrast-btn'>
+                <img src = "assets/sun icon.png" alt = "Toggle contrast" class = "contrast-icon">
+            </button>
+
+            <h3>20 years old, based in London, UK. Exploring, designing and building digital experiences, at the intersection of <span class = 'highlight'>code and creativity.</span></h3>
+
+            <button id = "openWorkBtn" class = "coding3-btn">Coding 3 Work</button>
+
+            <img src = 'assets/me.jpg' alt = 'Me' style="display:block; margin:auto; margin-top: -370px;" class = "circle-image">
+
+            <h2>BSc <span class = "highlight">Creative Computing</span> student, studying at UAL.</h2>
+
+            <div class = "top_bar">
+                <span><a href = "mailto:nikitacollins236@gmail.com">nikitacollins236@gmail.com</a></span>
+                <span><a href = "https://www.instagram.com/nxkkii1/">Instagram</a></span>
+                <span><a href = "https://www.linkedin.com/in/nikita-collins">LinkedIn</a></span>
+                <span><a href = "https://github.com/krispy2306">GitHub</a></span>
+            </div>
+        </div>
+
+        <div id="overlay" style = "display: none;"></div>
+
+        <div id = "workWindow" class = "workWindow">
+            <div id = "workHeader" class = "workHeader">
+            <span>Coding 3 Weekly Tasks</span>
+            <button id = "closeWorkBtn" class = "workClose">X</button>
+        </div>
+
+        <div class = "work-body">
+            <p class = "work-sub">
+                Click a week to view task preview and access files on GitHub.
+            </p>
+
+            <div class = "accordion">
+
+                <details>
+                    <summary>Week 1</summary>
+                    <div class = "week-body">
+                        <p>Anatomy of a Web Page 1</p>
+
+                        <img src="assets/week1.png" alt= "Week 1 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> index.html <br>
+                            <strong>Focus:</strong> HTML structure and a basic first webpage layout
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2001">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 2</summary>
+                    <div class = "week-body">
+                        <p>Anatomy of a Web Page 2</p>
+
+                        <img src="assets/week2.png" alt= "Week 2 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> poem.html <br>
+                            <strong>Focus:</strong> HTML structure and use of hyperlinks
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2002">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>Week 3</summary>
+                    <div class = "week-body">
+                        <p>CSS Positioning and Transformations</p>
+
+                        <img src = "assets/week3.png" alt= "Week 3 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> self_portrait.html <br>
+                            <strong>Focus:</strong> CSS: Box Model, positioning, transformations and display properties
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2003">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 4</summary>
+                    <div class = "week-body">
+                        <p>CSS Layouts and Responsive Design</p>
+
+                        <img src = "assets/week4.png" alt= "Week 4 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> None - link to Figma in readme <br>
+                            <strong>Focus:</strong> Creating website wireframes in Figma
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2004">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 6</summary>
+                    <div class = "week-body">
+                        <p>JavaScript for Web</p>
+
+                        <img src = "assets/week6.png" alt= "Week 6 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> water clock.html <br>
+                            <strong>Focus:</strong> JavaScript basics and DOM manipulation, time-based interactions
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2006">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 8</summary>
+                    <div class = "week-body">
+                        <p>Events and Interactivity</p>
+
+                        <img src = "assets/week8.png" alt= "Week 8 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> form.html <br>
+                            <strong>Focus:</strong> Handling user input through events, creating interactive experiences
+                        </p>
+                        
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2008">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 9</summary>
+                    <div class = "week-body">
+                        <p>Animation with GSAP</p>
+
+                        <img src = "assets/week9.png" alt= "Week 9 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> scrollytelling.html <br>
+                            <strong>Focus:</strong> Scroll-based animations using GSAP library
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2009">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Week 11</summary>
+                    <div class = "week-body">
+                        <p>Intro to 3D on the Web: Three.js</p>
+
+                        <img src = "assets/week11.png" alt= "Week 11 Preview" class = "week-preview">
+
+                        <p class = "week-desc">
+                            <strong>File:</strong> index.html <br>
+                            <strong>Focus:</strong> Basic 3D scene setup using Three.js
+                        </p>
+
+                        <div class = "week-actions">
+                        <a class = "week-btn-link" target = "_blank"
+                            href = "https://github.com/krispy2306/coding-3_web-design/tree/main/week%2011">
+                            View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="sketch.js"></script>
+    </body>
+</html>
+
