@@ -223,7 +223,8 @@ and also added a windowResized() function
 ```let bass = fft.getEnergy("bass");
     let mid = fft.getEnergy("mid");
     let treble = fft.getEnergy("treble");
-    let overallEnergy = (bass + mid + treble) / 3;```
+    let overallEnergy = (bass + mid + treble) / 3;
+```
 to get all frequency ban energies but still doesn't work
 - think i might have to settle with this look, suspecting its the ambient audio file itself that doesn't have many frequencies to begin with
 - went back to code I j had before recent change, like the movement here more
@@ -237,7 +238,8 @@ going to try add a mute button for accessibility purposes - may be distracting o
 - edited html to display mute button png at top center
 - added toggleMute() function in sketch.js:
 ```const muteButton = document.getElementById('muteButton');
-  muteButton.addEventListener('click', toggleMute);```
+  muteButton.addEventListener('click', toggleMute);
+```
 ```function toggleMute() {
   if (!song) return;
 
